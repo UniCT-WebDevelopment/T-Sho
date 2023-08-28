@@ -1,0 +1,524 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+body {
+
+    background: #588157;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: #775B59 2px solid;
+    box-shadow: 5px 2px 4px 1px #775B59;
+}
+
+.logo img {
+    margin: 15px 0px 10px 15px;
+    width: 220px;
+    height: 55px;
+    cursor: pointer;
+}
+
+.search-box {
+    max-width: 240px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 0.7rem;
+    padding: 8px 15px;
+    background: #333;
+    border-radius: 20px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-right: 1rem;
+    margin-top: 15px;
+    position: absolute;
+    top: 15px;
+    right: 20px
+}
+
+
+.search-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fcfeff;
+    background: transparent;
+    font-size: 0.9rem;
+}
+
+.search-box img {
+    width: 32px;
+    height: 32px;
+    color: white;
+}
+
+.search-box .bx {
+    cursor: pointer;
+
+}
+
+.search-box .bx:hover {
+    color: white;
+}
+
+.profile-box {
+    display: flex;
+    margin-right: 10px;
+  }
+  
+  .profile-box span {
+    color: #333;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 540;
+  
+  }
+  
+  .profile-box .profile {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .profile-box span {
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 540;
+    margin-top: 20px;
+  
+  }
+  
+  #logout{
+    margin-right: 0px;
+    margin-left: 15px;
+    font-size: 16px;
+  }
+
+
+
+
+.heading {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 14px;
+    margin-bottom: 120px;
+    position: relative;
+}
+
+.heading .heading-title {
+    margin-top: 50px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+
+.cerca-meglio {
+    position: absolute;
+    text-align: center;
+    top: 100px;
+    right: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border-color: transparent;
+    text-decoration: underline;
+}
+
+
+.swiper-container {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    max-width: 100%;
+    margin-left: 60px;
+    margin-right: 60px;
+    justify-content: space-between;
+    /* Per allineare i bottoni a sinistra e destra */
+    align-items: center;
+}
+
+
+
+.swiper-button-next,
+.swiper-button-prev {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    border-radius: 200px 200px 200px 200px;
+    background-color: #50514F;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+.swiper-wrapper {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.swiper-wrapper img {
+    height: 250px;
+    width: 185px;
+    cursor: pointer;
+
+}
+
+.swiper-slide {
+    /* Per visualizzare massimo 6 film alla volta */
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 225px;
+}
+
+
+
+@media screen and (max-width: 1050px) {
+    .swiper-slide {
+        /* Per visualizzare massimo 5 film alla volta */
+        padding: 20px;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .swiper-slide {
+        /* Per visualizzare massimo 4 film alla volta */
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+
+}
+
+@media screen and (max-width: 650px) {
+    .swiper-slide {
+        /* flex: 0 0 calc(100% / 3); */
+        /* Per visualizzare massimo 3 film alla volta */
+        padding: 20px;
+        box-sizing: border-box;
+    }
+}
+
+/* Nascondi i bottoni prev/next su dispositivi con schermo piccolo */
+@media screen and (max-width: 480px) {
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
+    }
+
+    .swiper-slide {
+        /* flex: 0 0 calc(100% / 2); */
+        /* Per visualizzare massimo 2 film alla volta */
+        padding: 20px;
+        box-sizing: border-box;
+    }
+}
+
+
+
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    color: #fcfeff;
+    font-size: 18px !important;
+    font-weight: 700;
+}
+
+.swiper-button-next {
+    /* top: 300px; */
+    right: 20px;
+    margin-left: 20px;
+}
+
+.swiper-button-prev {
+    /* top: 300px; */
+    left: 20px;
+}
+
+#serie-swiper .swiper-button-next {
+    /* top: 600px; */
+    right: 20px;
+    margin-left: 20px;
+}
+
+#serie-swiper .swiper-button-prev {
+    /* top: 600px; */
+    left: 20px;
+}
+
+.swiper-slide h3 {
+    font-size: 18px;
+    color: #000;
+    text-align: center;
+    background-color: #A3B18A;
+}
+
+.swiper-title {
+    margin: 10px 0;
+    margin-left: 60px;
+    font-size: 24px;
+    color: #000;
+    text-align: left;
+}
+
+#no-results-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #A3B18A;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.caricamento {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    padding: 20px;
+    text-align: center;
+}
+
+.spinner {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #333333;
+    -webkit-mask: radial-gradient(circle closest-side at 50% 40%, #0000 94%, #000);
+    transform-origin: 50% 40%;
+    animation: spinner-pl92zb 1s infinite linear;
+}
+
+@keyframes spinner-pl92zb {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+
+.hidden {
+    display: none;
+}
+
+.suggestions {
+    position: absolute;
+    top: calc(100% - 8px);
+    right: 0px;
+    width: 240px;
+    max-height: 150px;
+    overflow-y: auto;
+    background-color: #333;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.suggestion-item {
+    padding: 8px 16px;
+    cursor: pointer;
+    color: white
+}
+
+.suggestion-item:hover {
+    background-color: #3c3c3c;
+}
+
+
+.container-info {
+    margin-top: 30px;
+    background-color: #33333399;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+}
+
+
+
+.movie-info-img {
+    margin-right: 20px;
+
+}
+
+.movie-info-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+/* titolo del film */
+.movie-info-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* testo con la trama del film */
+.movie-info-text .trama {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.movie-info-text .generi,
+.movie-info-text .anno {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.movie-info-text .visto-button {
+    background-color: #d2d2d2;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.visto-button:enabled:hover {
+    background-color: #ffffff;
+    color: #333;
+    cursor: pointer;
+}
+
+.movie-info-text .visto-button-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    /* Aggiunto per allineare il .visto-button nell'angolo in basso a destra */
+}
+
+.movie-info-text .visto-text {
+    margin-right: 10px;
+}
+
+/* Stile per il form dei commenti */
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    max-width: 600px;
+    align-items: flex-start;
+}
+
+.comment-form input.comment-input {
+    width: 100%;
+    height: 150px;
+    background-color: #A3B18A;
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.comment-form button.submit-comment-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #d2d2d2;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-end;
+    /* Posiziona il bottone a destra */
+
+}
+
+.comment-form button.submit-comment-button:hover {
+    background-color: #ffffff;
+    color: #333;
+    cursor: pointer;
+}
+
+
+
+
+
+
+.comments-container {
+    max-width: 600px;
+    margin: 0 auto;
+    /* Per centrare i commenti nella pagina */
+}
+
+.ciao {
+    margin-top: 10px;
+    padding-bottom: 2px;
+    display: block;
+    margin-left: 50px;
+
+}
+
+.commento {
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #A3B18A;
+}
+
+.commento img {
+
+    width: 40px;
+    height: 40px;
+    margin-top: -30px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+}
+
+.commento .nome-utente {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.commento .data-commento {
+    margin-left: 300px;
+    font-size: 0.8em;
+    color: #333;
+}
+
+.commento .testo-commento {
+
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    scrollbar-width: thin;
+    background-color: #A3B18A;
+    scrollbar-color: #888 transparent;
+}
+
+.suggestions::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+}

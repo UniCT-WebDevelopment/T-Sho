@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T-Sho</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="./assets/images/logo_verde.png" alt="Logo">
+    </div>
+    <div class="signin-signup">
+      <button id="signin" class="signin" onclick="">Sign in</button>
+      <!-- <button id="signup" class="signup">Sign up</button> -->
+    </div>
+  </header>
+
+  <div class="container">
+
+    <div class="presentation">
+        <p>Welcome to our website, your ultimate destination for a vast archive of films, TV shows, and
+            anime!
+            Discover an extensive collection of captivating content and immerse yourself in the world of entertainment.
+            What sets us apart is our interactive community-driven features.
+            <br><br>
+            Sign up today and create your personalized
+            profile,
+            where you can keep track of the shows and movies you've watched. Our intuitive tracking system allows you to
+            easily mark the ones you've seen,
+            helping you curate your own personal library..</p>
+    </div>
+
+
+    <div class="icon-list">
+
+        <div class="icon-item">
+            <img src="/assets/images/arrow-down-thin-svgrepo-com.svg">
+            <p>TRACK shows and movies that you love</p>
+          </div>
+
+          <div class="icon-item">
+            <img src="/assets/images/search-svgrepo-com.svg">
+            <p>DISCOVER what to watch next</p>
+          </div>
+
+          <div class="icon-item">
+            <img src="/assets/images/chat-svgrepo-com.svg">
+            <p>COMMENT on shows with other members</p>
+          </div>
+
+    </div>
+</div>
+
+<script>
+  
+  document.getElementById("signin").addEventListener("click", function() {
+      window.location.assign("http://localhost:3000/pages/login.html");
+  });
+</script>
+</body>
+
+</html>
+
+</html>

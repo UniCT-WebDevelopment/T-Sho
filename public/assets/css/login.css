@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #588157;
+    min-height: 100vh;
+
+    background-position: center;
+}
+
+
+nav {
+    position: fixed;
+    z-index: 1;
+}
+
+nav a img {
+    margin: 15px 0px 10px 15px;
+    width: 220px;
+    height: 55px;
+    cursor: pointer;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+.form-login {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 4px;
+    padding: 70px;
+    width: 450px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.421);
+}
+
+.form-login h2 {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.form-login form {
+    margin: 25px 0 65px;
+}
+
+form .form-control {
+    height: 50px;
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.form-control input {
+    height: 100%;
+    width: 100%;
+    background: #333;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0 20px;
+}
+
+.form-control input:is(:focus, :valid) {
+    background: #A3B18A;
+    color: black;
+    padding: 16px 20px 0;
+}
+
+.form-control label {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    pointer-events: none;
+    color: #8c8c8c;
+    transition: all 0.1s ease;
+}
+
+.form-control input:is(:focus, :valid)~label {
+    color: black;
+
+    font-size: 0.75rem;
+    transform: translateY(-130%);
+}
+
+form button {
+    width: 100%;
+    padding: 16px 0;
+    font-size: 1rem;
+    background: #A3B18A;
+    color: black;
+    font-weight: 500;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    margin: 25px 0 10px;
+    cursor: pointer;
+    transition: 0.1s ease;
+}
+
+form button:hover {
+    background: #588157;
+}
+
+.form-login a {
+    text-decoration: none;
+}
+
+.form-login a:hover {
+    text-decoration: underline;
+}
+
+.form-login :where(label, p, small, a) {
+    color: #b3b3b3;
+}
+
+form .form-help {
+    display: flex;
+    justify-content: space-between;
+}
+
+form .remember-me {
+    display: flex;
+}
+
+form .remember-me input {
+    margin-right: 5px;
+    accent-color: #b3b3b3;
+}
+
+form .form-help :where(label, a) {
+    font-size: 0.9rem;
+}
+
+.form-login p a {
+    color: #fff;
+}
+
+.form-login small {
+    display: block;
+    margin-top: 15px;
+    color: #b3b3b3;
+}
+
+.form-login small a {
+    color: #0071eb;
+}
+
+@media (max-width: 740px) {
+    body::before {
+        display: none;
+    }
+
+    nav,
+    .form-login,
+    .form-signup {
+        padding: 20px;
+    }
+
+    nav a img {
+        width: 140px;
+    }
+
+    .form-login,
+    .form-signup {
+        width: 100%;
+        top: 43%;
+    }
+
+    .form-login form,
+    .form-signup form {
+        margin: 25px 0 40px;
+    }
+}
+
+
+/*°°°°°°°°°°°°°°°°° FORM SIGNUP °°°°°°°°°°°°°°°°°°°*/
+
+
+.form-signup {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 4px;
+    padding: 70px;
+    width: 450px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.421);
+}
+
+.form-signup h2 {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.form-signup form {
+    margin: 25px 0 65px;
+}
+
+.form-signup a {
+    text-decoration: none;
+}
+
+.form-signup a:hover {
+    text-decoration: underline;
+}
+
+.form-signup :where(label, p, small, a) {
+    color: #b3b3b3;
+}
+
+.form-signup p a {
+    color: #fff;
+}
+
+.form-signup small {
+    display: block;
+    margin-top: 15px;
+    color: #b3b3b3;
+}
+
+.form-signup small a {
+    color: #0071eb;
+}
